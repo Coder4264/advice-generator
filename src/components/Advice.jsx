@@ -1,9 +1,11 @@
-import React from 'react'
-
-export default function Advice() {
+import React from "react";
+export default function Advice({advices}){
+  
   return (
-    <div className='text-[28px] font-extrabold py-7'>
-        Hello world
+    <div>
+      {advices && (
+        <p className='text-[20px] md:text-[24px] lg:text-[28px] font-extrabold py-7' key={advices.id}>“{advices.advice}”</p>
+      )}
     </div>
-  )
-}
+  );
+};
